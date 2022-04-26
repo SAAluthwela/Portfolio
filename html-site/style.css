@@ -103,7 +103,7 @@ h6 {
   font-family: "Roboto Mono", monospace;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 3em 30em;
+
   grid-template-areas:
     "nav-wrapper nav-wrapper"
     "left-column right-column";
@@ -163,6 +163,14 @@ h6 {
 .left-column {
   grid-area: left-column;
 }
+
+#profile_pic {
+  height: 400px;
+  width: 310px;
+  margin-left: 25%;
+  object-fit: cover;
+}
+
 .right-column {
   grid-area: right-column;
 }
