@@ -284,6 +284,36 @@ h6 {
   left: -19px;
 }
 
+.about-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding-top: 50px;
+  padding-bottom: 50px;
+  gap: 100px;
+}
+
+#skills {
+  padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--previewShadowBg);
+}
+
+#social_img {
+  width: 100%;
+  border: 1px solid var(--borderColor);
+}
+
+.social-links {
+  display: grid;
+  align-content: center;
+  text-align: center;
+}
+
+.social-links h3 {
+  margin-top: 50px;
+}
+
 @media screen and (max-width: 1200px) {
   .main-container {
     width: 95%;
