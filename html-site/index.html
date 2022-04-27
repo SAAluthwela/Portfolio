@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,6 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Nunito:wght@300&family=Poppins:wght@300&family=Roboto+Mono:wght@500&family=Russo+One&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" id="theme-style" href="" />
     <title>Supun Akalanka</title>
   </head>
   <body>
@@ -48,10 +49,10 @@
             <h5 style="text-align: center; line-height: 0">Personlize Theme</h5>
 
             <div id="theme-option-wrapper">
-              <div id="light-mode" class="theme-dot"></div>
-              <div id="blue-mode" class="theme-dot"></div>
-              <div id="green-mode" class="theme-dot"></div>
-              <div id="purple-mode" class="theme-dot"></div>
+              <div data-mode="light" id="light-mode" class="theme-dot"></div>
+              <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+              <div data-mode="green" id="green-mode" class="theme-dot"></div>
+              <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
             </div>
 
             <p id="settings-note">
@@ -239,9 +240,11 @@
     </section>
 
     <section class="s1">
-      <div class="main-container">
-        <p>All Rights reserved@ 2022</p>
+      <div class="main-container" style="text-align: center">
+        <p>All Rights reserved @2022</p>
       </div>
     </section>
+
+    <script src="script.js"></script>
   </body>
 </html>
