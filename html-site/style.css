@@ -6,6 +6,12 @@
 
   --mainText: black;
   --secodaryText: #4b5156;
+
+  --themeDotBorder: #24292e;
+
+  --previewBg: rgb(251, 249, 243, 0.8);
+
+  --previewShadowBg: #f0ead6;
 }
 
 html,
@@ -143,6 +149,8 @@ h6 {
   border-radius: 50%;
   margin: 5px;
 
+  margin: 5px;
+
   -webkit-box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
   box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.75);
@@ -162,6 +170,8 @@ h6 {
 
 .left-column {
   grid-area: left-column;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 #profile_pic {
@@ -169,14 +179,132 @@ h6 {
   width: 310px;
   margin-left: 25%;
   object-fit: cover;
+  border: 1px solid var(--borderColor);
+}
+
+#theme-option-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.theme-dot {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #000000;
+  border: 2px solid var(--themeDotBorder);
+
+  -webkit-box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+
+  cursor: pointer;
+}
+
+.theme-dot:hover {
+  border-width: 5px;
+}
+
+#light-mode {
+  background-color: #fff;
+}
+
+#blue-mode {
+  background-color: #192734;
+}
+
+#green-mode {
+  background-color: #78866b;
+}
+
+#purple-mode {
+  background-color: #7e4c74;
+}
+
+#settings-note {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
 }
 
 .right-column {
   grid-area: right-column;
+  display: grid;
+  align-items: center;
+
+  padding-top: 50px;
+  padding-bottom: 90px;
+}
+
+#preview-shadow {
+  background-color: var(--previewShadowBg);
+  width: 300px;
+  height: 180px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+#preview {
+  width: 300px;
+  border: 2px solid #17a2b8;
+  background-color: var(--previewBg);
+  text-align: left;
+  padding: 15px;
+  position: relative; /*postioning parent class with relative
+                         to make chind class postioning absolute*/
+}
+
+.corner {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 2px solid #17a2b8;
+  padding: 15px;
+  position: absolute;
+}
+
+#corner-tl {
+  top: -19px;
+  left: -19px;
+}
+
+#corner-tr {
+  top: -19px;
+  right: -19px;
+}
+
+#corner-bl {
+  bottom: -19px;
+  right: -19px;
+}
+
+#corner-br {
+  bottom: -19px;
+  left: -19px;
 }
 
 @media screen and (max-width: 1200px) {
   .main-container {
     width: 95%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .intro-wrapper {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "nav-wrapper"
+      "left-column"
+      "right-column";
+  }
+
+  .right-column {
+    justify-content: center;
+  }
+
+  #profile_pic {
+    margin-left: 17%;
   }
 }
